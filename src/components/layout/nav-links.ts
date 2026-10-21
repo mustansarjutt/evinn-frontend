@@ -3,6 +3,7 @@ export const NAV_LINKS = [
   { label: "Electric Bikes", href: "/electric-bikes" },
   { label: "Electric Scooters", href: "/electric-scooters" },
   { label: "Brands", href: "/brands" },
+  { label: "Accessories", href: "/accessories" },
   { label: "Compare", href: "/compare-vehicles" },
   { label: "About", href: "/about-us" },
   { label: "Blog", href: "/blog" },
