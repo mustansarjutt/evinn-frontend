@@ -4,11 +4,13 @@
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
-  --color-brand: #8fdf0d;
-  --color-brand-hover: #a3f722;
-  --color-brand-soft: #b9ed42;
+  --color-brand: #ff8a00;
+  --color-brand-hover: #ff9d2e;
+  --color-brand-soft: #ffb45c;
+  --color-brand-blue: #0057d9;
+  --color-brand-blue-soft: #75aaff;
 
-  --color-night: #0b0f0c;
+  --color-night: #0b0f14;
   --color-coal: #0b0f14;
 
   --color-ink-950: #06111a;
@@ -33,6 +35,15 @@
 
   body {
     @apply bg-ink-950 text-fg;
+  }
+
+  ::selection {
+    @apply bg-brand/30 text-fg;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-blue-soft);
+    outline-offset: 4px;
   }
 
   button:not(:disabled),

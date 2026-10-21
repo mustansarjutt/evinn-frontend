@@ -59,7 +59,7 @@ export default async function BrandPage({ params, searchParams }: PageProps<"/br
 
       <div className="grid gap-8 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-10">
         <Reveal className="h-fit rounded-2xl border border-line bg-ink-900 p-6 sm:p-8 lg:sticky lg:top-24">
-          <div className="relative mx-auto flex h-36 w-36 items-center justify-center overflow-hidden rounded-xl bg-white">
+          <div className="relative mx-auto flex h-36 w-36 items-center justify-center overflow-hidden rounded-xl border border-line bg-ink-850">
             {brand.logoUrl ? (
               <Image src={brand.logoUrl} alt={`${brand.displayName} logo`} fill sizes="144px" className="object-contain p-3" />
             ) : (

@@ -96,7 +96,7 @@ export function WarrantyChecker({ bikes }: { bikes: Bike[] }) {
                     onClick={() => choose(bike)}
                     className="flex w-full items-center gap-3 border-b border-white/5 px-4 py-3 text-left transition-colors last:border-0 hover:bg-white/5"
                   >
-                    <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-white">
+                    <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-ink-850">
                       <ProductImage
                         src={bike.imageUrl}
                         alt=""
@@ -133,7 +133,7 @@ export function WarrantyChecker({ bikes }: { bikes: Bike[] }) {
           className="mt-8 space-y-6 rounded-2xl border border-brand/30 bg-ink-900 p-6 sm:p-8"
         >
           <div className="flex items-center gap-4">
-            <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl bg-white">
+            <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl bg-ink-850">
               <ProductImage
                 src={selected.imageUrl}
                 alt={selected.name}

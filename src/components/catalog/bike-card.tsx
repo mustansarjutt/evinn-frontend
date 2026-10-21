@@ -12,7 +12,7 @@ export function BikeCard({ bike }: { bike: Bike }) {
     <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-line bg-ink-900 transition duration-300 hover:-translate-y-1 hover:border-line-strong hover:shadow-[0_14px_35px_rgba(0,0,0,0.3)]">
       <Link
         href={href}
-        className="relative block h-52 bg-white"
+        className="relative block h-52 bg-ink-850"
         tabIndex={-1}
         aria-hidden
       >

@@ -23,7 +23,8 @@ export default async function HomePage() {
             <Reveal className="mb-6 flex flex-wrap items-end justify-between gap-4">
               <div>
                 <h2 className="text-4xl font-bold text-fg sm:text-5xl">
-                  All Brands
+                  <span className="text-brand-blue">All </span>
+                  <span className="text-brand">Brands</span>
                 </h2>
                 <p className="mt-1 text-lg text-soft sm:text-xl">
                   Explore the electric vehicle brands in one place.
@@ -49,7 +50,8 @@ export default async function HomePage() {
             <Reveal className="mb-6 flex flex-wrap items-end justify-between gap-4">
               <div>
                 <h2 className="text-3xl font-bold text-white sm:text-4xl">
-                  Latest Arrivals
+                  <span className="text-brand-blue">Latest </span>
+                  <span className="text-brand">Arrivals</span>
                 </h2>
                 <p className="mt-1 text-soft">
                   The newest electric bikes and scooters on EVINN.

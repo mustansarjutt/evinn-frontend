@@ -18,7 +18,7 @@ export function GuideTabs() {
         <div
           role="tablist"
           aria-label="Guides"
-          className="overflow-hidden rounded-xl border border-[#263541] bg-[#0b151e]"
+          className="overflow-hidden rounded-xl border border-line bg-ink-900"
         >
           {GUIDES.map((item) => {
             const active = item.id === activeId;
@@ -35,10 +35,10 @@ export function GuideTabs() {
                   setExpanded(false);
                 }}
                 className={cn(
-                  "flex h-14 w-full items-center border-b border-[#263541] px-6 text-left text-sm transition-colors last:border-b-0 sm:text-base",
+                  "flex h-14 w-full items-center border-b border-line px-6 text-left text-sm transition-colors last:border-b-0 sm:text-base",
                   active
-                    ? "border-l-[3px] border-l-[#9bdc16] bg-[#101b24] font-medium text-[#9bdc16]"
-                    : "text-[#d3d9de] hover:bg-[#101b24] hover:text-[#9bdc16]",
+                    ? "border-l-[3px] border-l-brand bg-brand-blue/10 font-medium text-brand"
+                    : "text-fg hover:bg-ink-800 hover:text-brand",
                 )}
               >
                 {item.name}
@@ -55,13 +55,13 @@ export function GuideTabs() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
-          className="relative min-h-64 overflow-hidden rounded-xl border border-[#263541] bg-[#0b151e]"
+          className="relative min-h-64 overflow-hidden rounded-xl border border-line bg-ink-900"
         >
           <div className="relative z-10 max-w-130 px-6 py-7 sm:px-8 sm:py-8">
             <h2 className="text-2xl font-semibold text-white sm:text-3xl">
               {guide.name}
             </h2>
-            <p className="mt-3 max-w-117.5 text-sm leading-6 text-[#aeb8c2] sm:text-base sm:leading-7">
+            <p className="mt-3 max-w-117.5 text-sm leading-6 text-soft sm:text-base sm:leading-7">
               {guide.description}
             </p>
             <button
@@ -69,7 +69,7 @@ export function GuideTabs() {
               onClick={() => setExpanded((value) => !value)}
               aria-expanded={expanded}
               aria-controls="guide-details"
-              className="mt-5 inline-flex items-center gap-2 rounded-md bg-[#82c900] px-7 py-3 text-sm font-medium text-white transition-colors hover:bg-[#72b500]"
+              className="mt-5 inline-flex items-center gap-2 rounded-md bg-brand px-7 py-3 text-sm font-semibold text-ink-950 transition-colors hover:bg-brand-hover"
             >
               {expanded ? "Show Less" : "Learn More"}
               <ChevronDown
@@ -103,23 +103,23 @@ export function GuideTabs() {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <div className="mt-5 rounded-xl border border-[#263541] bg-[#0b151e] p-6 sm:p-10">
+            <div className="mt-5 rounded-xl border border-line bg-ink-900 p-6 sm:p-10">
               <h3 className="mb-2 text-2xl font-bold text-white sm:text-3xl">
                 {guide.heading}
               </h3>
-              <p className="mb-8 text-sm text-[#aeb8c2] sm:text-base">
+              <p className="mb-8 text-sm text-soft sm:text-base">
                 {guide.subheading}
               </p>
               <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
                 {guide.sections.map((section) => (
                   <div
                     key={section.title}
-                    className="rounded-lg border border-[#263541] bg-[#101b24] p-5"
+                    className="rounded-lg border border-line bg-ink-800 p-5"
                   >
-                    <h4 className="mb-2 text-lg font-semibold text-[#9bdc16]">
+                    <h4 className="mb-2 text-lg font-semibold text-brand-blue-soft">
                       {section.title}
                     </h4>
-                    <p className="text-sm leading-relaxed text-[#c1cbd3]">
+                    <p className="text-sm leading-relaxed text-soft">
                       {section.text}
                     </p>
                   </div>
@@ -134,10 +134,10 @@ export function GuideTabs() {
         {guide.features.map(({ label, icon: Icon }) => (
           <li
             key={label}
-            className="flex min-h-28 flex-col items-center justify-center rounded-xl border border-[#263541] bg-[#0b151e] px-3 py-5 text-center transition-colors hover:border-[#9bdc16]/60"
+            className="flex min-h-28 flex-col items-center justify-center rounded-xl border border-line bg-ink-900 px-3 py-5 text-center transition-colors hover:border-brand/60"
           >
-            <Icon className="mb-3 h-8 w-8 text-[#9bdc16]" aria-hidden />
-            <span className="text-xs font-medium text-[#d8dee3] sm:text-[15px]">
+            <Icon className="mb-3 h-8 w-8 text-brand" aria-hidden />
+            <span className="text-xs font-medium text-fg sm:text-[15px]">
               {label}
             </span>
           </li>

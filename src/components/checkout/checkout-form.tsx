@@ -350,7 +350,7 @@ export function CheckoutForm({ directBike }: CheckoutFormProps) {
         <ul className="mt-5 space-y-4">
           {lines.map((line) => (
             <li key={line.bikeId} className="flex gap-3">
-              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-white">
+              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-ink-850">
                 <ProductImage
                   src={line.imageUrl}
                   alt=""

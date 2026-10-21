@@ -73,7 +73,7 @@ export default async function BikeDetailPage({
           </Link>
 
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-            <Reveal className="relative min-h-80 overflow-hidden rounded-2xl bg-white sm:min-h-115">
+            <Reveal className="relative min-h-80 overflow-hidden rounded-2xl border border-line bg-ink-850 sm:min-h-115">
               <ProductImage
                 src={bike.imageUrl}
                 alt={bike.name}

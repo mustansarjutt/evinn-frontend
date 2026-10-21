@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, ShoppingCart, X } from "lucide-react";
+import { BrandLogo } from "@/components/layout/brand-logo";
 import { NavSearch } from "@/components/layout/nav-search";
 import { isActivePath, NAV_LINKS } from "@/components/layout/nav-links";
 import { useCartCount } from "@/lib/cart";
@@ -51,18 +52,17 @@ export function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-night/95 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b border-brand-blue/20 bg-night/95 backdrop-blur">
       <nav
         aria-label="Main"
         className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8"
       >
         <Link
           href="/"
-          className="text-xl font-bold tracking-tight"
+          className="flex shrink-0 items-center rounded-sm"
           aria-label="EVINN home"
         >
-          <span className="text-white">EV</span>
-          <span className="text-brand">INN</span>
+          <BrandLogo preload />
         </Link>
 
         <ul className="hidden items-center gap-6 text-[15px] font-medium text-gray-300 xl:flex">
@@ -75,7 +75,7 @@ export function Navbar() {
                   aria-current={active ? "page" : undefined}
                   className={cn(
                     "transition-colors hover:text-brand",
-                    active && "text-brand",
+                    active && "text-brand-blue-soft",
                   )}
                 >
                   {link.label}
@@ -119,7 +119,7 @@ export function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden border-t border-white/5 bg-night xl:hidden"
+            className="overflow-hidden border-t border-brand-blue/20 bg-night xl:hidden"
           >
             <ul className="flex flex-col gap-1 px-4 py-4 text-sm font-medium text-gray-300 sm:px-6">
               {NAV_LINKS.map((link) => {
@@ -131,7 +131,7 @@ export function Navbar() {
                       aria-current={active ? "page" : undefined}
                       className={cn(
                         "block rounded-md px-2 py-2.5 transition-colors hover:bg-white/5 hover:text-brand",
-                        active && "text-brand",
+                        active && "bg-brand-blue/10 text-brand-blue-soft",
                       )}
                     >
                       {link.label}

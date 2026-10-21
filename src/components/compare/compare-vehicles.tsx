@@ -120,7 +120,7 @@ export function CompareVehicles({ bikes, initialIds }: CompareVehiclesProps) {
                   </div>
                   <Link
                     href={`/bikes/${bike.slug}`}
-                    className="relative mt-3 block h-28 rounded-md bg-white"
+                    className="relative mt-3 block h-28 rounded-md bg-ink-850"
                   >
                     <ProductImage
                       src={bike.imageUrl}

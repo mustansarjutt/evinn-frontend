@@ -35,8 +35,9 @@ export function Hero() {
       <div className="mx-auto grid max-w-7xl items-center gap-2 lg:grid-cols-2">
         <motion.div {...enter(0, -40)}>
           <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-            The Future <br />
-            Moves <span className="text-brand">Electric</span>
+            <span className="text-brand-blue">The Future</span> <br />
+            <span className="text-brand-blue">Moves </span>
+            <span className="text-brand">Electric</span>
           </h1>
           <p className="mt-6 max-w-md text-base text-gray-400 sm:text-xl">
             Explore 10+ Trusted Brands, 50+ Models. One Destination.
@@ -50,7 +51,7 @@ export function Hero() {
             </Link>
             <Link
               href="/compare-vehicles"
-              className="rounded-md border border-white/20 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-brand hover:text-brand lg:px-6 lg:py-4 lg:text-base"
+              className="rounded-md border border-line px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-brand hover:text-brand lg:px-6 lg:py-4 lg:text-base"
             >
               Compare Vehicles
             </Link>
@@ -76,7 +77,7 @@ export function Hero() {
         {STATS.map(({ icon: Icon, label }) => (
           <li
             key={label}
-            className="flex items-center gap-3 rounded-lg border border-white/5 bg-white/3 px-4 py-4"
+            className="flex items-center gap-3 rounded-lg border border-brand-blue/20 bg-ink-900 px-4 py-4"
           >
             <Icon className="h-7 w-7 shrink-0 text-brand" aria-hidden />
             <span className="text-base font-medium text-gray-200">{label}</span>

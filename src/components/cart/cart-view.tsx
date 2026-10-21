@@ -62,7 +62,7 @@ export function CartView() {
                 <div className="flex gap-4">
                   <Link
                     href={`/bikes/${item.slug}`}
-                    className="relative h-28 w-28 shrink-0 overflow-hidden rounded-lg bg-white"
+                    className="relative h-28 w-28 shrink-0 overflow-hidden rounded-lg bg-ink-850"
                     tabIndex={-1}
                     aria-hidden
                   >

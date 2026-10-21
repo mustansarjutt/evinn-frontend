@@ -25,7 +25,8 @@ export function Categories() {
       <div className="mx-auto w-full max-w-7xl">
         <Reveal>
           <h2 className="pb-6 text-3xl font-bold text-white sm:text-4xl">
-            Shop By Category
+            <span className="text-brand-blue">Shop By </span>
+            <span className="text-brand">Category</span>
           </h2>
         </Reveal>
 
@@ -34,7 +35,7 @@ export function Categories() {
             <Reveal
               key={category.title}
               delay={index * 0.1}
-              className="flex flex-col overflow-hidden rounded-xl border border-white/5 bg-white/3 transition-colors hover:bg-white/5 lg:min-h-85 lg:flex-row"
+              className="flex flex-col overflow-hidden rounded-xl border border-brand-blue/25 bg-ink-900 transition-colors hover:border-brand/50 hover:bg-ink-800 lg:min-h-85 lg:flex-row"
             >
               <div className="flex flex-col items-center justify-center px-6 py-8 text-center lg:w-[48%] lg:items-start lg:px-8 lg:text-left">
                 <h3 className="text-2xl font-bold text-white sm:text-3xl">

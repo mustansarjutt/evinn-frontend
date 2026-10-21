@@ -54,7 +54,7 @@ export function OrderConfirmation() {
           initial={reduceMotion ? false : { scale: 0.6, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ type: "spring", stiffness: 260, damping: 18 }}
-          className="flex h-20 w-20 items-center justify-center rounded-full border-[3px] border-brand shadow-[0_0_25px_rgba(143,223,13,0.25)]"
+          className="flex h-20 w-20 items-center justify-center rounded-full border-[3px] border-brand bg-brand/10 shadow-lg shadow-brand/25"
         >
           <Check className="h-12 w-12 text-brand" strokeWidth={3} aria-hidden />
         </motion.div>

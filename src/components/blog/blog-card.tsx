@@ -6,7 +6,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group relative block overflow-hidden rounded-2xl border border-white/5 bg-[#12181f] transition-transform duration-300 hover:-translate-y-1"
+      className="group relative block overflow-hidden rounded-2xl border border-line bg-ink-900 transition-transform duration-300 hover:-translate-y-1"
     >
       <article className="relative h-56 w-full sm:h-52">
         <Image

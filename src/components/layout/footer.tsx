@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BadgeCheck, Headphones, ShieldCheck, Truck } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { BrandLogo } from "@/components/layout/brand-logo";
 import { getBrands } from "@/lib/catalog";
 import { SITE } from "@/data/site";
 import type { Brand } from "@/types/api";
@@ -59,17 +60,18 @@ export async function Footer() {
   const brands = (await loadBrands()).slice(0, 6);
 
   return (
-    <footer className="w-full bg-coal text-gray-400">
+    <footer className="w-full border-t border-brand-blue/20 bg-coal text-gray-400">
       <div className="mx-auto w-full max-w-7xl px-4 pt-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 pb-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 xl:gap-8">
           <div className="sm:col-span-2 lg:col-span-4 xl:col-span-2">
             <Link
               href="/"
-              className="text-2xl font-extrabold tracking-wide text-white"
+              className="inline-flex rounded-sm"
+              aria-label="EVINN home"
             >
-              EV<span className="text-brand">INN</span>
+              <BrandLogo className="w-40" sizes="160px" />
             </Link>
-            <p className="mt-1 mb-3 text-xs font-semibold uppercase tracking-wider text-brand">
+            <p className="mt-3 mb-3 text-xs font-semibold uppercase tracking-wider text-brand">
               {SITE.tagline}
             </p>
             <p className="mb-5 max-w-sm text-sm leading-6">
@@ -111,7 +113,7 @@ export async function Footer() {
           {BADGES.map(({ icon: Icon, title, sub }) => (
             <li
               key={title}
-              className="flex items-center gap-3 rounded-lg border border-white/10 px-3 py-3"
+              className="flex items-center gap-3 rounded-lg border border-brand-blue/20 bg-ink-900 px-3 py-3"
             >
               <Icon className="h-5 w-5 shrink-0 text-brand" aria-hidden />
               <span className="text-xs">
@@ -126,7 +128,7 @@ export async function Footer() {
           <p>
             © {new Date().getFullYear()}{" "}
             <span className="font-semibold text-white">
-              EV<span className="text-brand">INN</span>
+              <span className="text-brand-blue-soft">EV</span><span className="text-brand">INN</span>
             </span>
             . All Rights Reserved.
           </p>
@@ -152,7 +154,7 @@ function FooterColumn({
 }) {
   return (
     <nav aria-label={title}>
-      <h2 className="mb-4 text-sm font-bold uppercase tracking-wide text-brand">
+      <h2 className="mb-4 text-sm font-bold uppercase tracking-wide text-brand-blue-soft">
         {title}
       </h2>
       <ul className="flex flex-col gap-2.5">

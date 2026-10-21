@@ -84,7 +84,7 @@ export default async function BlogPostPage({
               <li key={item.slug}>
                 <Link
                   href={`/blog/${item.slug}`}
-                  className="block overflow-hidden rounded-xl border border-white/5 bg-[#12181f] transition-colors hover:border-brand/40"
+                  className="block overflow-hidden rounded-xl border border-line bg-ink-900 transition-colors hover:border-brand/40"
                 >
                   <div className="relative h-32 w-full">
                     <Image

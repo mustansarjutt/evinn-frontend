@@ -218,7 +218,7 @@ export function NavSearch() {
                         onClick={close}
                         className="flex items-center gap-3 rounded-lg px-2 py-2 transition-colors hover:bg-white/5"
                       >
-                        <span className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-md bg-white">
+                        <span className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-md bg-ink-850">
                           {result.imageUrl ? (
                             <Image
                               src={result.imageUrl}

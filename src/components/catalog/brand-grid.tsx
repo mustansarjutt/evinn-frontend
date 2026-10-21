@@ -10,7 +10,7 @@ export function BrandGrid({ brands }: { brands: BrandSummary[] }) {
         <Reveal key={brand._id} as="li" delay={Math.min(index, 10) * 0.03}>
           <Link
             href={`/brands/${brand._id}`}
-            className="group flex h-28 flex-col items-center justify-center gap-2 rounded-lg border border-line bg-ink-850 px-3 transition-colors duration-200 hover:border-brand-soft hover:bg-ink-800"
+            className="group flex h-28 flex-col items-center justify-center gap-2 rounded-lg border border-brand-blue/30 bg-ink-850 px-3 transition-colors duration-200 hover:border-brand hover:bg-brand/5"
           >
             {brand.logoUrl ? (
               <span className="relative h-14 w-full">
@@ -23,7 +23,7 @@ export function BrandGrid({ brands }: { brands: BrandSummary[] }) {
                 />
               </span>
             ) : null}
-            <span className="text-sm font-semibold text-soft group-hover:text-white">
+            <span className="text-sm font-semibold text-soft group-hover:text-brand">
               {brand.displayName}
             </span>
           </Link>
